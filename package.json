@@ -1,0 +1,26 @@
+{
+  "name": "full-text-search",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Oscar Bastardo <osalbr.14@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "tslint src/**/*.ts",
+    "dev": "nodemon --exec ts-node src/bin/index.ts --watch src",
+    "test": "jest --watch",
+    "coverage": "jest --coverage",
+    "build": "rimraf dist && tsc",
+    "start": "node dist/bin/index.js"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "@types/node": "^11.11.3",
+    "jest": "^24.5.0",
+    "nodemon": "^1.18.10",
+    "rimraf": "^2.6.3",
+    "ts-jest": "^24.0.0",
+    "ts-node": "^8.0.3",
+    "tslint": "^5.14.0",
+    "typescript": "^3.3.3333"
+  }
+}
