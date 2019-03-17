@@ -1,5 +1,8 @@
 class BM25 {
-  constructor() {
+  private tokenizer: (text: string) => string[];
 
+  constructor(tokenizer: (text: string) => string[]) {
+    this.tokenizer = tokenizer;
   }
+
 }

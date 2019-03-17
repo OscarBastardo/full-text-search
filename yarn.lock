@@ -336,6 +336,11 @@
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-1.0.1.tgz#0a851d3bd96498fa25c33ab7278ed3bd65f06c3e"
   integrity sha512-l42BggppR6zLmpfU6fq9HEa2oGPEI8yrSPL3GITjfRInppYFahObbIQOQK3UGxEnyQpltZLaPe75046NOZQikw==
 
+"@types/stemmer@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@types/stemmer/-/stemmer-1.0.2.tgz#bd8354f50b3c9b87c351d169240e45cf1fa1f5e8"
+  integrity sha512-2gWEIFqVZjjZxo8/TcugCAl7nW9Jd9ArEDpTAc5nH7d+ZUkreHA7GzuFcLZ0sflLrA5b1PZ+2yDyHJcuP9KWWw==
+
 "@types/yargs@^12.0.2", "@types/yargs@^12.0.9":
   version "12.0.9"
   resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-12.0.9.tgz#693e76a52f61a2f1e7fb48c0eef167b95ea4ffd0"
@@ -3614,6 +3619,11 @@ stealthy-require@^1.1.1:
   resolved "https://registry.yarnpkg.com/stealthy-require/-/stealthy-require-1.1.1.tgz#35b09875b4ff49f26a777e509b3090a3226bf24b"
   integrity sha1-NbCYdbT/SfJqd35QmzCQoyJr8ks=
 
+stemmer@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/stemmer/-/stemmer-1.0.3.tgz#485655cd828da05e970d7a35c24d228ced6a4fba"
+  integrity sha512-OHF/1kDQdV/8omIFGk7vCSZOnJ7RAk5nsbm2AVNiUrWpdKSNihQp0OODezjC7cd6ZcSgSaKCDPDjWDty2UQNDg==
+
 string-length@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/string-length/-/string-length-2.0.0.tgz#d40dbb686a3ace960c1cffca562bf2c45f8363ed"
@@ -3841,6 +3851,11 @@ ts-node@^8.0.3:
     make-error "^1.1.1"
     source-map-support "^0.5.6"
     yn "^3.0.0"
+
+tsconfig-paths-jest@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/tsconfig-paths-jest/-/tsconfig-paths-jest-0.0.1.tgz#a977a5648c434037b69884e644ce1b82bf025b68"
+  integrity sha1-qXelZIxDQDe2mITmRM4bgr8CW2g=
 
 tslib@^1.8.0, tslib@^1.8.1:
   version "1.9.3"
