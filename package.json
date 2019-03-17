@@ -20,6 +20,7 @@
     "rimraf": "^2.6.3",
     "ts-jest": "^24.0.0",
     "ts-node": "^8.0.3",
+    "tsconfig-paths-jest": "^0.0.1",
     "tslint": "^5.14.0",
     "typescript": "^3.3.3333"
   }
