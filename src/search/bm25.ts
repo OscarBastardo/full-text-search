@@ -1,4 +1,8 @@
-import Document from "typings/Document";
+export interface Document {
+  id: number;
+  body: string;
+  score?: number;
+}
 
 class BM25 {
   public totalDocumentTermLength: number = 0;

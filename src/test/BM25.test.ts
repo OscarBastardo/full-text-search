@@ -1,6 +1,5 @@
-import Document from "typings/Document";
-import BM25 from "./bm25";
-import tokenizer from "./tokenizer";
+import BM25, { Document } from "../search/BM25";
+import tokenizer from "../search/tokenizer";
 
 describe("BM25", () => {
   const k1 = 1.3;

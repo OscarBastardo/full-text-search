@@ -1,4 +1,4 @@
-import tokenizer, { removeStopwords } from "./tokenizer";
+import tokenizer, { removeStopwords } from "../search/tokenizer";
 
 describe("Tokenizer", () => {
   it("should remove stopwords from array of tokens", () => {

@@ -7,7 +7,6 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
-      "typings/*": [ "src/typings/*" ],
       "helpers/*": [ "src/helpers/*" ]
     }
   },
@@ -15,6 +14,6 @@
     "src/**/*.ts"
   ],
   "exclude": [
-    "src/test/**/*.spec.ts"
+    "src/test/**/*.test.ts"
   ]
 }

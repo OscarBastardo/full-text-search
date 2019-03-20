@@ -1,4 +1,4 @@
-import BM25 from "./bm25";
+import BM25 from "./BM25";
 import tokenizer from "./tokenizer";
 
 const k1 = 1.3;
