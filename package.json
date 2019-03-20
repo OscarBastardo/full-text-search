@@ -7,6 +7,7 @@
   "scripts": {
     "lint": "tslint src/**/*.ts",
     "dev": "nodemon --exec ts-node src/bin/index.ts --watch src",
+    "scrape": "ts-node src/bin/scrape.ts",
     "test": "jest --watch",
     "coverage": "jest --coverage",
     "build": "rimraf dist && tsc",
@@ -15,6 +16,7 @@
   "devDependencies": {
     "@types/jest": "^24.0.11",
     "@types/node": "^11.11.3",
+    "@types/puppeteer": "^1.12.3",
     "@types/stemmer": "^1.0.2",
     "jest": "^24.5.0",
     "nodemon": "^1.18.10",
@@ -26,6 +28,7 @@
     "typescript": "^3.3.3333"
   },
   "dependencies": {
+    "puppeteer": "^1.13.0",
     "stemmer": "^1.0.3"
   }
 }
