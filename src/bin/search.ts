@@ -15,12 +15,16 @@ const items = (() => {
   return JSON.parse(data);
 })();
 
-const search = new BM25(tokenizer, k1, b);
+const bm25 = new BM25(tokenizer, k1, b);
 
 items.forEach((document: TextLinkItem, index: number) => {
-  search.addDocument({
+  bm25.addDocument({
     id: index,
     body: document.text,
     link: document.link,
   });
 });
+
+bm25.updateIdf();
+
+console.log(bm25.search("people"));

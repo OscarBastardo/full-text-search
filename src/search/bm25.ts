@@ -25,12 +25,13 @@ class BM25 {
     if (typeof doc.id === "undefined") { throw new Error("ID is a required property of documents."); }
     if (typeof doc.body === "undefined") { throw new Error("Body is a required property of documents."); }
 
-    const { id, body } = doc;
+    const { id, body, link } = doc;
     const tokens = this.tokenizer(doc.body);
 
     const docObj = {
       id,
       body,
+      link,
       tokens,
       termCount: tokens.length,
       terms: null,
