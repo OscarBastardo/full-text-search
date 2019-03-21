@@ -1,5 +1,5 @@
 import * as dotenv from "dotenv";
-import TextLinkScraper from "../scraper/TextLinkScraper";
+import TextLinkScraper from "src/scraper/TextLinkScraper";
 
 dotenv.config();
 

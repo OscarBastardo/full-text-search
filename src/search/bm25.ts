@@ -2,6 +2,7 @@ export interface Document {
   id: number;
   body: string;
   score?: number;
+  link?: string;
 }
 
 class BM25 {
