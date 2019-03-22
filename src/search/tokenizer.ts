@@ -1,4 +1,4 @@
-import stopwords from "helpers/stopwords";
+import stopwords from "src/helpers/stopwords";
 // tslint:disable-next-line: no-var-requires
 const stemmer = require("stemmer");
 
