@@ -1,5 +1,5 @@
 import SearchController, { SearchObject } from './SearchController';
-import { Document } from '../search/BM25';
+import { Document } from 'src/search/BM25';
 
 describe('SearchController', () => {
   it('should search and return the result objects with the desired attributes', () => {
