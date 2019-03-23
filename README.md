@@ -46,6 +46,7 @@ For production:
 ## Notes from development
 - JavaScript has fewer packages for Natural Language Processing than languages such as Python. One example is the lack of maintained lemmatisation modules.
 - The way search is performed is suboptimal, as it goes through every document assigning a score to each. Inverted indices can be used to improve its performance.
+- The search object with all the documents and their scores is loaded in memory for the purpose of the search exercise. This means size of the searchable data is limited by the memory of the host.
 
 ## Future Improvements
 - Optimise search by indexing
