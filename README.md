@@ -2,9 +2,9 @@
 
 The following repository contains the implementation of a search engine based on `Okapi BM25`, a ranking function representing a modern approach for query searches and document retrieval based on `TF-IDF` term scoring.
 
-The motivation for this project is to understand what comprises text search and how search as a service (e.g. Google) and as software tools (e.g Elasticsearch) use certain algorithms to optimise their search capabilities.
+The motivation for this project is to understand what comprises text search and how search as a service (e.g. Google) and as software tools (e.g Elasticsearch) use certain algorithms to optimise their search capabilities. The implementation is still foundational, but it goes a step beyond TF-IDF by implementing Okapi BM25 which helps control term-frequency saturation and field-length normalization.
 
-For the corpus of searchable text data a web scraping class powered by puppeteer is used. It allows to run a script to scrape the data from a given the website URL and some other parameters. It has the capability to go through an infinite scroll page and fetch the text until the desired amount is met.
+For the corpus of searchable text data a web scraping class powered by puppeteer is used. It allows to run a script to scrape the data from a website given the its URL and some other parameters. It has the capability to go through an infinite scroll page and fetch the text until the desired amount of items is met.
 
 ## Instructions
 
@@ -13,10 +13,10 @@ To install node packages:
 
 To set the environmental variables:
 1. Run `cp .env.example .env`
-2. Verify the `.env` file variables and modify them accordingly
+2. Verify the `.env` file variables and modify the BM25 hyper parameters and scraping variables accordingly
 
 To scrape a website:
-1. Make sure the scraping-related variables are set to the desired values
+1. Make sure the scraping variables in the `.env` file are set to the desired values
 2. Run `yarn scrape`
 
 ### Run search server with Docker
@@ -42,3 +42,19 @@ For development:
 For production:
 - Build application with `yarn build`
 - Start application with `yarn start`
+
+## Notes from development
+- JavaScript has fewer packages for Natural Language Processing than languages such as Python. One example is the lack of maintained lemmatisation modules.
+- The way search is performed is suboptimal, as it goes through every document assigning a score to each. Inverted indices can be used to improve its performance.
+
+## Future Improvements
+- Optimise search by indexing
+- Add config object for single access to `.env` variable
+- Break down Scraper class and devise testing strategy
+
+## References
+- [Full-text search in JavaScript blog post](https://burakkanber.com/blog/machine-learning-full-text-search-in-javascript-relevance-scoring/)
+- [Web Scraping Infinite Scroll blog post](https://intoli.com/blog/scrape-infinite-scroll/)
+- [Elasticsearch's pluggable similarity algorithms](https://www.elastic.co/guide/en/elasticsearch/guide/current/pluggable-similarites.html)
+- [Wikipedia's article  on Full-text search](https://en.wikipedia.org/wiki/Full-text_search)
+- [Wikipedia's article on Okapi BM25](https://en.wikipedia.org/wiki/Okapi_BM25)
