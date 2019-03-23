@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    container_name: full-text-search
+    image: node:10-alpine
+    working_dir: /www
+    command:  sh -c "yarn install && yarn dev"
+    volumes:
+    - ./:/www
+    - /www/node_modules/
+    ports:
+    - 4000:4000

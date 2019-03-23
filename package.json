@@ -10,10 +10,11 @@
     "scrape": "ts-node src/bin/scrape.ts",
     "test": "jest --watch",
     "coverage": "jest --coverage",
-    "build": "rimraf dist && tsc",
+    "build": "rimraf dist && tsc && ef-tspm",
     "start": "node dist/bin/search.js"
   },
   "devDependencies": {
+    "@ef-carbon/tspm": "^2.2.5",
     "@types/dotenv": "^6.1.0",
     "@types/jest": "^24.0.11",
     "@types/koa": "^2.0.48",

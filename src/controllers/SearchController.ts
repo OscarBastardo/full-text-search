@@ -1,14 +1,14 @@
 import { Document } from 'src/search/BM25';
 
 export interface SearchObject {
-  search: (query: string) => Document[]
+  search: (query: string) => Document[];
 }
 
 class SearchController {
-  private store: SearchObject
+  private store: SearchObject;
 
   constructor(store: SearchObject) {
-    this.store = store
+    this.store = store;
   }
 
   public search(query: string): Document[] {
