@@ -17,4 +17,6 @@ ENV NODE_ENV $NODE_ENV
 
 USER node
 
+RUN yarn scrape
+
 CMD [ "yarn", "start" ]

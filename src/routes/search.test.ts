@@ -1,5 +1,5 @@
 import * as request from 'supertest';
-import createServer from '../server';
+import createServer from 'src/server';
 
 describe('GET /search', () => {
   it('should respond 200 OK with search results', async () => {
