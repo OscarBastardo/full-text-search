@@ -28,7 +28,7 @@ items.forEach((document: TextLinkItem, index: number) => {
 bm25.updateIdf();
 
 const PORT = process.env.PORT || 4000;
-const server = createServer();
+const server = createServer(bm25);
 server.listen(PORT, () => {
   console.log(`server listening on port ${PORT}`);
 });

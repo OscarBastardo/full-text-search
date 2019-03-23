@@ -1,9 +1,15 @@
 import * as Router from "koa-router";
 
-import search from "./search";
+import getSearchRoutes from "./search";
 
-const router = new Router();
+function getRouter(storage: any): Router {
+  const router = new Router();
 
-router.use("/search", search);
+  const search = getSearchRoutes(storage);
 
-export default router;
+  router.use("/search", search);
+
+  return router;
+}
+
+export default getRouter;

@@ -1,14 +1,28 @@
 import * as Router from "koa-router";
 
-const router = new Router();
+function getSearchRoutes(store: any) {
+  const router = new Router();
 
-router.get("/", (ctx) => {
-  try {
-    ctx.status = 200;
-    ctx.body = {};
-  } catch (err) {
-    throw new Error(err);
-  }
-});
+  router.get("/", (ctx) => {
+    try {
+      ctx.status = 200;
+      const results = search(ctx.query.query, store);
+      if (!results.length) {
+        ctx.status = 204;
+      }
+      ctx.body = results;
+    } catch (err) {
+      throw new Error(err);
+    }
+  });
 
-export default router.routes();
+  return router.routes();
+}
+
+function search(query: string, store: any) {
+  const searchResults: any[] = store.search(query);
+  const results = searchResults.map(({ id, body, link }) => ({ id, body, link }));
+  return results;
+}
+
+export default getSearchRoutes;
