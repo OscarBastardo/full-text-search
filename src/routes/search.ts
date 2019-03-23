@@ -1,12 +1,15 @@
 import * as Router from 'koa-router';
 
+import { getSearchController } from 'src/controllers';
+
 function getSearchRoutes(store: any) {
   const router = new Router();
+  const searchController = getSearchController(store);
 
   router.get('/', (ctx) => {
     try {
       ctx.status = 200;
-      const results = search(ctx.query.query, store);
+      const results = searchController.search(ctx.query.query);
       if (!results.length) {
         ctx.status = 204;
       }
@@ -14,15 +17,9 @@ function getSearchRoutes(store: any) {
     } catch (err) {
       throw new Error(err);
     }
-  });
+});
 
   return router.routes();
-}
-
-function search(query: string, store: any) {
-  const searchResults: any[] = store.search(query);
-  const results = searchResults.map(({ id, body, link }) => ({ id, body, link }));
-  return results;
 }
 
 export default getSearchRoutes;

@@ -26,10 +26,10 @@ describe('GET /search', () => {
     const app = server.listen(5000);
     const response = await request(app).get('/search');
     const results = response.body;
-    const result = results[0];
     expect(response.status).toEqual(200);
     expect(response.type).toEqual('application/json');
     expect(Array.isArray(results)).toEqual(true);
+    const result = results[0];
     expect(typeof result).toEqual('object');
     expect(Object.keys(result).sort()).toEqual(['body', 'id', 'link']);
     app.close();
