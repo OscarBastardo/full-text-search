@@ -1,7 +1,7 @@
-import * as fs from "fs";
-import { Page } from "puppeteer";
+import * as fs from 'fs';
+import { Page } from 'puppeteer';
 // tslint:disable-next-line: no-var-requires
-const puppeteer = require("puppeteer");
+const puppeteer = require('puppeteer');
 
 export interface TextLinkItem {
   text: string;
@@ -33,7 +33,7 @@ class TextLinkScraper {
     await page.goto(this.url);
     const items: TextLinkItem[] = await this.scrapeInfiniteScrollItems(page);
     const json = JSON.stringify(items, null, 2);
-    fs.writeFileSync(this.storagePath, json, "utf8");
+    fs.writeFileSync(this.storagePath, json, 'utf8');
     await browser.close();
   }
 
@@ -46,8 +46,8 @@ class TextLinkScraper {
       let previousHeight: number;
       while (items.length < this.itemTargetCount) {
         items = await page.evaluate(this.extractItems, this.querySelector);
-        previousHeight = await page.evaluate("document.body.scrollHeight");
-        await page.evaluate("window.scrollTo(0, document.body.scrollHeight)");
+        previousHeight = await page.evaluate('document.body.scrollHeight');
+        await page.evaluate('window.scrollTo(0, document.body.scrollHeight)');
         await page.waitForFunction(`document.body.scrollHeight > ${previousHeight}`);
         await page.waitFor(scrollDelay);
       }
@@ -60,7 +60,7 @@ class TextLinkScraper {
     const items: TextLinkItem[] = [];
     for (const element of extractedElements) {
       const text = element.textContent;
-      const link = element.closest("a").href;
+      const link = element.closest('a').href;
       items.push({ text, link });
     }
     return items;

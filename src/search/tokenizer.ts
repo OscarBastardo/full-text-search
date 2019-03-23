@@ -1,6 +1,6 @@
-import stopwords from "src/helpers/stopwords";
+import stopwords from 'src/helpers/stopwords';
 // tslint:disable-next-line: no-var-requires
-const stemmer = require("stemmer");
+const stemmer = require('stemmer');
 
 export const removeStopwords = (tokens: string[]): string[] => {
   const stopStems = stopwords.map(stemmer);
@@ -16,10 +16,10 @@ export const removeStopwords = (tokens: string[]): string[] => {
 const tokenizer = (text: string): string[] => {
   const tokens = text
     .toLowerCase()
-    .replace(/\W/g, " ")
-    .replace(/\s+/g, " ")
+    .replace(/\W/g, ' ')
+    .replace(/\s+/g, ' ')
     .trim()
-    .split(" ")
+    .split(' ')
     .map((a) => stemmer(a));
   return removeStopwords(tokens);
 };

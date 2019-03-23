@@ -1,9 +1,9 @@
-import * as Router from "koa-router";
+import * as Router from 'koa-router';
 
 function getSearchRoutes(store: any) {
   const router = new Router();
 
-  router.get("/", (ctx) => {
+  router.get('/', (ctx) => {
     try {
       ctx.status = 200;
       const results = search(ctx.query.query, store);

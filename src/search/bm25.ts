@@ -22,8 +22,8 @@ class BM25 {
   }
 
   public addDocument(doc: Document): void {
-    if (typeof doc.id === "undefined") { throw new Error("ID is a required property of documents."); }
-    if (typeof doc.body === "undefined") { throw new Error("Body is a required property of documents."); }
+    if (typeof doc.id === 'undefined') { throw new Error('ID is a required property of documents.'); }
+    if (typeof doc.body === 'undefined') { throw new Error('Body is a required property of documents.'); }
 
     const { id, body, link } = doc;
     const tokens = this.tokenizer(doc.body);
@@ -43,7 +43,7 @@ class BM25 {
 
     const terms = {};
     for (const term of tokens) {
-      if (typeof terms[term] === "undefined") {
+      if (typeof terms[term] === 'undefined') {
           terms[term] = {
               count: 0,
               freq: 0,
@@ -56,7 +56,7 @@ class BM25 {
       if (terms.hasOwnProperty(term)) {
         terms[term].freq = terms[term].count / docObj.termCount;
 
-        if (typeof this.terms[term] === "undefined") {
+        if (typeof this.terms[term] === 'undefined') {
             this.terms[term] = {
                 idf: 0,
                 n: 0,
@@ -90,11 +90,11 @@ class BM25 {
         this.documents[id].score = 0;
 
         for (const queryTerm of queryTerms) {
-            if (typeof this.terms[queryTerm] === "undefined") {
+            if (typeof this.terms[queryTerm] === 'undefined') {
                 continue;
             }
 
-            if (typeof this.documents[id].terms[queryTerm] === "undefined") {
+            if (typeof this.documents[id].terms[queryTerm] === 'undefined') {
                 continue;
             }
 

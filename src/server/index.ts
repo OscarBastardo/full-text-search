@@ -1,7 +1,6 @@
-import * as Koa from "koa";
-import * as Router from "koa-router";
+import * as Koa from 'koa';
 
-import getRouter from "src/routes";
+import getRouter from 'src/routes';
 
 function createServer(storage) {
   const server = new Koa();

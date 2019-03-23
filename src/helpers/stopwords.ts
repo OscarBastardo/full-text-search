@@ -1,3 +1,4 @@
+/* tslint:disable quotemark*/
 const stopwords = [
   "a",
   "about",

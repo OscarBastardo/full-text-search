@@ -1,13 +1,13 @@
-import * as Router from "koa-router";
+import * as Router from 'koa-router';
 
-import getSearchRoutes from "./search";
+import getSearchRoutes from './search';
 
-function getRouter(storage: any): Router {
+function getRouter(store: any): Router {
   const router = new Router();
 
-  const search = getSearchRoutes(storage);
+  const search = getSearchRoutes(store);
 
-  router.use("/search", search);
+  router.use('/search', search);
 
   return router;
 }
