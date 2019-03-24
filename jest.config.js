@@ -4,5 +4,6 @@ const moduleNameMapper = require("tsconfig-paths-jest")(tsconfig);
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
+  modulePathIgnorePatterns: ["<rootDir>/webapp/"],
   moduleNameMapper
 };

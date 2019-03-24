@@ -6,10 +6,14 @@ The motivation for this project is to understand what comprises text search and 
 
 For the corpus of searchable text data a web scraping class powered by puppeteer is used. It allows to run a script to scrape the data from a website given the its URL and some other parameters. It has the capability to go through an infinite scroll page and fetch the text until the desired amount of items is met.
 
+A simple web app built with create-react-app is used to showcase the use of the search service by a client. It will run alongside the service.
+
 ## Instructions
 
 To install node packages:
-1. Run `yarn` or `npm`
+1. Run `yarn` or `npm install`
+2. Run `cd webapp && yarn` for the webapp
+3. Run `cd ..` to go back to the root folder
 
 To set the environmental variables:
 1. Run `cp .env.example .env`
@@ -25,6 +29,7 @@ Make sure you have Docker client installed in your dev machine.
 To run dev server in watch mode:
 1. Run `docker-compose up`
 2. It will listen to port `4000` by default
+3. It will render the webapp in port `3000` by default
 
 To use the production container:
 1. Run `docker build -t full-text-search .` and wait for it to build
@@ -33,7 +38,6 @@ To use the production container:
 
 
 ### Run locally
-
 For development:
 1. Run linter with `yarn lint`
 2. Run tests in watch mode with `yarn test`
@@ -57,5 +61,5 @@ For production:
 - [Full-text search in JavaScript blog post](https://burakkanber.com/blog/machine-learning-full-text-search-in-javascript-relevance-scoring/)
 - [Web Scraping Infinite Scroll blog post](https://intoli.com/blog/scrape-infinite-scroll/)
 - [Elasticsearch's pluggable similarity algorithms](https://www.elastic.co/guide/en/elasticsearch/guide/current/pluggable-similarites.html)
-- [Wikipedia's article  on Full-text search](https://en.wikipedia.org/wiki/Full-text_search)
+- [Wikipedia's article on Full-text search](https://en.wikipedia.org/wiki/Full-text_search)
 - [Wikipedia's article on Okapi BM25](https://en.wikipedia.org/wiki/Okapi_BM25)
