@@ -7,7 +7,7 @@
   "scripts": {
     "lint": "tslint src/**/*.ts",
     "dev": "nodemon --exec ts-node -r tsconfig-paths/register src/bin/search.ts --watch src",
-    "scrape": "ts-node src/bin/scrape.ts",
+    "scrape": "ts-node -r tsconfig-paths/register src/bin/scrape.ts",
     "test": "jest --watch",
     "coverage": "jest --coverage",
     "build": "rimraf dist && tsc && ef-tspm",

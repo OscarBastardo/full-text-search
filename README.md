@@ -51,7 +51,7 @@ For production:
 ## Future Improvements
 - Optimise search by indexing
 - Add config object for single access to `.env` variable
-- Break down Scraper class and devise testing strategy
+- Devise testing strategy for Scraper class
 
 ## References
 - [Full-text search in JavaScript blog post](https://burakkanber.com/blog/machine-learning-full-text-search-in-javascript-relevance-scoring/)

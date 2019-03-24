@@ -51,7 +51,9 @@ class TextLinkScraper {
         await page.waitForFunction(`document.body.scrollHeight > ${previousHeight}`);
         await page.waitFor(scrollDelay);
       }
-    } catch (e) { return; }
+    } catch (e) {
+      return items;
+    }
     return items;
   }
 
