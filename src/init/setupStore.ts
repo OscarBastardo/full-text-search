@@ -3,7 +3,7 @@ import * as fs from 'fs';
 
 import BM25 from 'src/search/BM25';
 import tokenizer from 'src/search/tokenizer';
-import { TextLinkItem } from 'src/scraper/TextLinkScraper';
+import { TextLinkItem } from 'src/scraper/InfiniteScrollScraper';
 
 dotenv.config();
 

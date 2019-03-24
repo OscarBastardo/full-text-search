@@ -8,7 +8,7 @@ export interface TextLinkItem {
   link: string;
 }
 
-class TextLinkScraper {
+class InfiniteScrollScraper {
   private url: string;
   private querySelector: string;
   private itemTargetCount: number;
