@@ -69,4 +69,4 @@ class InfiniteScrollScraper {
   }
 }
 
-export default TextLinkScraper;
+export default InfiniteScrollScraper;
